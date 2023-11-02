@@ -1,0 +1,104 @@
+{
+  "name": "taro-demo",
+  "version": "1.0.0",
+  "private": true,
+  "description": "taro-demo",
+  "templateInfo": {
+    "name": "taro-hooks",
+    "typescript": true,
+    "css": "less"
+  },
+  "lint-staged": {
+    "*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "*.ts?(x)": [
+      "prettier --parser=typescript --write",
+      "eslint --fix"
+    ]
+  },
+  "scripts": {
+    "prepare": "husky install",
+    "build:weapp": "taro build --type weapp",
+    "build:swan": "taro build --type swan",
+    "build:alipay": "taro build --type alipay",
+    "build:tt": "taro build --type tt",
+    "build:h5": "taro build --type h5",
+    "build:rn": "taro build --type rn",
+    "build:qq": "taro build --type qq",
+    "build:jd": "taro build --type jd",
+    "build:quickapp": "taro build --type quickapp",
+    "dev:weapp": "npm run build:weapp -- --watch",
+    "dev:swan": "npm run build:swan -- --watch",
+    "dev:alipay": "npm run build:alipay -- --watch",
+    "dev:tt": "npm run build:tt -- --watch",
+    "dev:h5": "npm run build:h5 -- --watch",
+    "dev:rn": "npm run build:rn -- --watch",
+    "dev:qq": "npm run build:qq -- --watch",
+    "dev:jd": "npm run build:jd -- --watch",
+    "dev:quickapp": "npm run build:quickapp -- --watch",
+    "update:deps": "pnpm update --interactive --latest"
+  },
+  "browserslist": [
+    "last 3 versions",
+    "Android >= 4.1",
+    "ios >= 8"
+  ],
+  "author": "",
+  "dependencies": {
+    "@babel/runtime": "^7.23.2",
+    "@taro-hooks/plugin-react": "^2.0.7",
+    "@tarojs/components": "3.6.18",
+    "@tarojs/helper": "3.6.18",
+    "@tarojs/plugin-framework-react": "3.6.18",
+    "@tarojs/plugin-platform-alipay": "3.6.18",
+    "@tarojs/plugin-platform-h5": "3.6.18",
+    "@tarojs/plugin-platform-jd": "3.6.18",
+    "@tarojs/plugin-platform-qq": "3.6.18",
+    "@tarojs/plugin-platform-swan": "3.6.18",
+    "@tarojs/plugin-platform-tt": "3.6.18",
+    "@tarojs/plugin-platform-weapp": "3.6.18",
+    "@tarojs/react": "3.6.18",
+    "@tarojs/runtime": "3.6.18",
+    "@tarojs/shared": "3.6.18",
+    "@tarojs/taro": "3.6.18",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "taro-hooks": "^2.0.7"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.23.2",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@pmmmwh/react-refresh-webpack-plugin": "^0.5.11",
+    "@tarojs/cli": "3.6.18",
+    "@tarojs/taro-loader": "3.6.18",
+    "@tarojs/webpack5-runner": "3.6.18",
+    "@types/node": "^20.8.10",
+    "@types/react": "^18.2.34",
+    "@types/webpack-env": "^1.18.3",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "babel-plugin-import": "^1.13.8",
+    "babel-preset-taro": "3.6.18",
+    "eslint": "^8.52.0",
+    "eslint-config-taro": "3.6.18",
+    "eslint-plugin-import": "^2.29.0",
+    "eslint-plugin-react": "^7.33.2",
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "husky": "^8.0.3",
+    "lint-staged": "^15.0.2",
+    "postcss": "^8.4.31",
+    "prettier": "^3.0.3",
+    "react-refresh": "^0.14.0",
+    "stylelint": "15.11.0",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.2.2",
+    "webpack": "^5.89.0"
+  },
+  "engines": {
+    "node": ">=16.14.0",
+    "pnpm": "^8"
+  }
+}
