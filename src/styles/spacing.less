@@ -1,0 +1,38 @@
+/* 边距 2-70 */
+.spacing(@classNamePrefix,@property,@n: 70, @i: 2) when (@i =< @n) {
+  .@{classNamePrefix}@{i},
+  :root:root .adm-button.@{classNamePrefix}@{i} {
+    @{property}: @i*1px;
+  }
+  .spacing(@classNamePrefix,@property,@n, @i + 2);
+}
+
+/* 左外边距 如：ml10,ml12 */
+.spacing(ml,margin-left);
+
+/* 右外边距 如：ml10,ml12 */
+.spacing(mr,margin-right);
+
+/* 上外边距 如：mt10,mt12 */
+.spacing(mt,margin-top);
+
+/* 下外边距 如：mb10,mb12 */
+.spacing(mb,margin-bottom);
+
+/* 上下左右 */
+.spacing(mg,margin);
+
+/* 左内边距 如：pl10,pl12 */
+.spacing(pl,padding-left);
+
+/* 右内边距 如：pr10,pr12 */
+.spacing(pr,padding-right);
+
+/* 上内边距 如：pt10,pt12 */
+.spacing(pt,padding-top);
+
+/* 下内边距 如：pb10,pb12 */
+.spacing(pb,padding-bottom);
+
+/* 上下左右 */
+.spacing(pd,padding);

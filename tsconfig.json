@@ -18,10 +18,12 @@
     "jsx": "react-jsx",
     "allowJs": true,
     "resolveJsonModule": true,
-    "typeRoots": [
-      "node_modules/@types"
-    ]
+    "esModuleInterop": true,
+    "typeRoots": ["node_modules/@types"],
+    "paths": {
+      "@/*": ["src/*"]
+    }
   },
-  "include": ["./src", "./types"],
+  "include": ["./src", "./types", "./config", "mock/**/*"],
   "compileOnSave": false
 }

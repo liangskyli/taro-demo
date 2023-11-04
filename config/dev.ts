@@ -1,8 +1,13 @@
+import path from 'path';
+
 module.exports = {
   env: {
     NODE_ENV: '"development"',
   },
   defineConstants: {},
-  mini: {},
+  plugins: [path.resolve(__dirname, './mock-server.ts')],
+  mini: {
+    hot: true,
+  },
   h5: {},
 };

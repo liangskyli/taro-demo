@@ -1,9 +1,10 @@
+import logo from '@/assets/hook.png';
+import { useAppDispatch, useAppSelector } from '@/store';
+import { setEnvEnum } from '@/store/reducers/common.model';
+import { Button, Image, Text, View } from '@tarojs/components';
 import { useCallback } from 'react';
-import { View, Text, Button, Image } from '@tarojs/components';
-import { useEnv, useNavigationBar, useModal, useToast } from 'taro-hooks';
-import logo from './hook.png';
-
-import './index.less';
+import { useEnv, useModal, useNavigationBar, useToast } from 'taro-hooks';
+import styles from './index.module.less';
 
 const Index = () => {
   const env = useEnv();
@@ -22,22 +23,39 @@ const Index = () => {
     });
   }, [show, showToast]);
 
+  const { envEnum } = useAppSelector((state) => state.common);
+  const dispatch = useAppDispatch();
+  const handleRedux = () => {
+    dispatch(setEnvEnum('-1'));
+  };
+
   return (
-    <View className="wrapper">
-      <Image className="logo" src={logo} />
-      <Text className="title">为Taro而设计的Hooks Library</Text>
-      <Text className="desc">
-        目前覆盖70%官方API. 抹平部分API在H5端短板. 提供近40+Hooks! 并结合ahook适配Taro!
+    <View className={styles.wrapper}>
+      <Image className={styles.logo} src={logo} />
+      <Text className={styles.title}>为Taro而设计的Hooks Library</Text>
+      <Text className={styles.desc}>
+        目前覆盖70%官方API. 抹平部分API在H5端短板. 提供近40+Hooks!
+        并结合ahook适配Taro!
       </Text>
-      <View className="list">
-        <Text className="label">运行环境</Text>
-        <Text className="note">{env}</Text>
+      <View className={styles.list}>
+        <Text className={styles.label}>运行环境</Text>
+        <Text className={styles.note}>{env}</Text>
       </View>
-      <Button className="button" onClick={() => setTitle('Taro Hooks Nice!')}>
+      <Button
+        className={styles.button}
+        onClick={() => setTitle('Taro Hooks Nice!')}
+      >
         设置标题
       </Button>
-      <Button className="button" onClick={handleModal}>
+      <Button className={styles.button} onClick={handleModal}>
         使用Modal
+      </Button>
+      <View className={styles.list}>
+        <Text className={styles.label}>redux数据</Text>
+        <Text className="color-red">{envEnum}</Text>
+      </View>
+      <Button className={styles.button} onClick={handleRedux}>
+        更新redux数据
       </Button>
     </View>
   );

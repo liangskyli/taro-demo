@@ -1,21 +1,13 @@
 module.exports = {
+  printWidth: 80,
   singleQuote: true,
   trailingComma: 'all',
-  printWidth: 100,
   proseWrap: 'never',
   endOfLine: 'lf',
-  overrides: [
-    {
-      files: '.prettierrc',
-      options: {
-        parser: 'json',
-      },
-    },
-    {
-      files: 'document.ejs',
-      options: {
-        parser: 'html',
-      },
-    },
+  overrides: [{ files: '.prettierrc', options: { parser: 'json' } }],
+  plugins: [
+    require.resolve('prettier-plugin-packagejson'),
+    require.resolve('prettier-plugin-organize-imports'),
   ],
+  pluginSearchDirs: false,
 };
