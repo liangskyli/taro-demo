@@ -9,6 +9,7 @@
 - Typescript
 - mock服务
 - 基于 redux 的数据流方案
+- NutUI-React 组件库
 
 ## 预览项目
 
@@ -100,11 +101,12 @@ pnpm i
 
 ## 已配置的依赖
 
-| 名称               | 库名称                                                   | 用途                                                                                   |
-|------------------|-------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Taro             | [@tarojs/taro](https://taro-docs.jd.com/docs/)        | 基础库                                                                                  |
-| taro-hooks       | [taro-hooks](https://next-taro-hooks.pages.dev/site/) | 一款对标 Taro API 开发的 Hooks Library. 覆盖几乎所有 Taro API 以及方法. 并且结合 ahooks 扩展了多端共用的 hooks 库. |
-| @reduxjs/toolkit | [@reduxjs/toolkit](https://redux-toolkit.js.org/)     | 基于 redux 的数据流方案                                                                      |
+| 名称                      | 库名称                                                                                     | 用途                                                                                   |
+|-------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Taro                    | [@tarojs/taro](https://taro-docs.jd.com/docs/)                                          | 基础库                                                                                  |
+| taro-hooks              | [taro-hooks](https://next-taro-hooks.pages.dev/site/)                                   | 一款对标 Taro API 开发的 Hooks Library. 覆盖几乎所有 Taro API 以及方法. 并且结合 ahooks 扩展了多端共用的 hooks 库. |
+| @reduxjs/toolkit        | [@reduxjs/toolkit](https://redux-toolkit.js.org/)                                       | 基于 redux 的数据流方案                                                                      |
+| @nutui/nutui-react-taro | [@nutui/nutui-react-taro](https://nutui.jd.com/taro/react/2x/#/zh-CN/guide/intro-react) | 基于 Taro，使用 React 技术栈开发小程序应用                                                          |
 
 
 ## 开发环境的依赖

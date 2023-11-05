@@ -1,7 +1,8 @@
 import logo from '@/assets/hook.png';
 import { useAppDispatch, useAppSelector } from '@/store';
 import { setEnvEnum } from '@/store/reducers/common.model';
-import { Button, Image, Text, View } from '@tarojs/components';
+import { Button } from '@nutui/nutui-react-taro';
+import { Image, Text, View } from '@tarojs/components';
 import { useCallback } from 'react';
 import { useEnv, useModal, useNavigationBar, useToast } from 'taro-hooks';
 import styles from './index.module.less';
@@ -56,6 +57,9 @@ const Index = () => {
       </View>
       <Button className={styles.button} onClick={handleRedux}>
         更新redux数据
+      </Button>
+      <Button type="primary" className={styles.button}>
+        NutUI React Button
       </Button>
     </View>
   );
