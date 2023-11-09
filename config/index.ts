@@ -1,9 +1,10 @@
+import { defineConfig } from '@tarojs/cli';
 import { resolve } from 'path';
 
-const config = {
+const config = defineConfig({
   projectName: 'taro-demo',
   date: '2023-11-2',
-  designWidth(input) {
+  designWidth(input: any) {
     // 配置 NutUI 375 尺寸
     if (input?.file?.replace(/\\+/g, '/').indexOf('@nutui') > -1) {
       return 375;
@@ -87,7 +88,7 @@ const config = {
       },
     },
   },
-};
+});
 
 module.exports = function (merge) {
   if (process.env.NODE_ENV === 'development') {

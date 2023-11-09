@@ -1,4 +1,6 @@
-module.exports = {
+import { defineConfig } from '@tarojs/cli';
+
+module.exports = defineConfig({
   env: {
     NODE_ENV: '"production"',
   },
@@ -32,4 +34,4 @@ module.exports = {
     //     }))
     // }
   },
-};
+});
