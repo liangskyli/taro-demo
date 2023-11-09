@@ -24,6 +24,6 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["./src", "./types", "./config", "mock/**/*"],
+  "include": ["./src", "./types", "./config", "mock/**/*","__test__","./vitest.setup.ts"],
   "compileOnSave": false
 }

@@ -38,6 +38,9 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
+    "coverage": "vitest run --coverage",
+    "test": "vitest run",
+    "test-u": "vitest -u run",
     "update:deps": "pnpm update --interactive --latest"
   },
   "browserslist": [
@@ -81,11 +84,14 @@
     "@tarojs/cli": "3.6.18",
     "@tarojs/taro-loader": "3.6.18",
     "@tarojs/webpack5-runner": "3.6.18",
+    "@testing-library/jest-dom": "^6.1.4",
+    "@testing-library/react": "^14.1.0",
     "@types/node": "^20.8.10",
     "@types/react": "^18.2.34",
     "@types/webpack-env": "^1.18.3",
     "@typescript-eslint/eslint-plugin": "^6.9.1",
     "@typescript-eslint/parser": "^6.9.1",
+    "@vitest/coverage-v8": "^0.34.6",
     "babel-plugin-import": "^1.13.8",
     "babel-preset-taro": "3.6.18",
     "eslint": "^8.52.0",
@@ -94,6 +100,7 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "husky": "^8.0.3",
+    "jsdom": "^22.1.0",
     "lint-staged": "^15.0.2",
     "postcss": "^8.4.31",
     "prettier": "^3.0.3",
@@ -103,6 +110,7 @@
     "stylelint": "15.11.0",
     "ts-node": "^10.9.1",
     "typescript": "^5.2.2",
+    "vitest": "^0.34.6",
     "webpack": "^5.89.0"
   },
   "engines": {
