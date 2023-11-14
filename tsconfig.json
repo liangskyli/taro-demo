@@ -24,6 +24,14 @@
       "@/*": ["src/*"]
     }
   },
-  "include": ["./src", "./types", "./config", "mock/**/*","__test__","./vitest.setup.ts"],
+  "include": [
+    "./src",
+    "./types",
+    "./config",
+    "mock/**/*",
+    "__test__",
+    "./vitest.setup.ts",
+    "node_modules/vitest/globals.d.ts"
+  ],
   "compileOnSave": false
 }
