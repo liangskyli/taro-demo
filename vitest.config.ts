@@ -1,3 +1,4 @@
+import path from 'path';
 import { defineConfig } from 'vitest/config';
 
 export default defineConfig({
@@ -7,10 +8,14 @@ export default defineConfig({
     setupFiles: ['./vitest.setup.ts'],
     css: true,
     alias: {
-      '@': './src',
+      '@': path.join(__dirname, './src'),
       '@tarojs/components': '@tarojs/components/lib/react/component-lib',
     },
     globals: true,
     testTimeout: 1000 * 60,
+    coverage: {
+      provider: 'v8',
+      include: ['src/**/*.{ts,js}'],
+    },
   },
 });
