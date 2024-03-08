@@ -37,6 +37,7 @@ pnpm build:weapp
 - 目录和文件名都用小写英文，单词间用中横线分隔)
 
 ```
+    ├── .husky                          // 提交钩子配置
     ├── __tests__                       // 单元测试
     ├── dist/                           // 微信小程序编译结果目录
     ├── config/                         // Taro 配置目录
@@ -67,23 +68,27 @@ pnpm build:weapp
     │   ├── app.less                    // 全局样式
     │   ├── app.tsx                     // 入口文件
     │   └── index.html    
+    ├── types/                          // 类型目录
+    │   └── global.d.ts                 // 全局类型配置    
+    ├── .commitlintrc.js                // 提交内容格式配置
     ├── .editorconfig                   // 编辑器代码风格配置
     ├── .eslintignore                   // eslint忽略文件
     ├── .eslintrc.js                    // eslint规则
     ├── .gitignore                      // git忽略文件
+    ├── .npmrc                          // npm配置文件
     ├── .prettierignore                 // 代码风格配置忽略文件
     ├── .prettierrc.js                  // 代码风格配置文件
     ├── .stylelintignore                // 样式风格配置忽略文件
     ├── .stylelintrc.js                 // 样式风格配置文件
     ├── babel.config.js                 // babel配置文件
-    ├── global.d.ts                     // 全局类型配置
-    ├── jest.config.js                  // 单元测试配置文件
     ├── package.json                    // 项目依赖
     ├── pnpm-lock.yaml                  // pnpm-lock.yaml 锁定文件 
     ├── project.config.json             // 微信小程序项目配置
     ├── project.tt.json                 // 头条小程序项目配置
     ├── README.md
-    └── tsconfig.json                   // typescript配置文件
+    ├── tsconfig.json                   // typescript配置文件
+    ├── vitest.config.ts                // 单元测试配置文件
+    └── vitest.setup.ts                 // 单元测试启动setup配置文件
 ```
 
 ## 项目版本升级
