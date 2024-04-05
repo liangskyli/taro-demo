@@ -1,9 +1,9 @@
 export default {
   'GET /api/get-list': (_req: any, res: any) => {
     const json = {
-      retCode: 0,
+      retCode: '0',
       data: { a: 1, b: 'bbb' },
-      retMsg: '',
+      retMsg: 'retMsg',
     };
 
     res.json(json);
@@ -11,7 +11,7 @@ export default {
 
   'POST /api/save-data': (_req: any, res: any) => {
     const json = {
-      retCode: 0,
+      retCode: '0',
       data: { a: 11, b: 'bbb1' },
       retMsg: '',
     };

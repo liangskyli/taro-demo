@@ -1,6 +1,7 @@
 import logo from '@/assets/hook.png';
 import { useAppDispatch, useAppSelector } from '@/store';
 import { setEnvEnum } from '@/store/reducers/common.model';
+import request, { createRequest } from '@/utils/request';
 import { Button } from '@nutui/nutui-react-taro';
 import { Image, Text, View } from '@tarojs/components';
 import { useCallback } from 'react';
@@ -28,6 +29,24 @@ const Index = () => {
   const dispatch = useAppDispatch();
   const handleRedux = () => {
     dispatch(setEnvEnum('-1'));
+  };
+  const getAjaxData = async () => {
+    await request({ url: 'http://localhost:9001/api/get-list' })
+      .then((result) => {
+        console.log('result:', result);
+      })
+      .catch((err) => {
+        console.log('err:', err);
+      });
+  };
+  const getAjaxData2 = async () => {
+    await createRequest({ url: 'http://localhost:9001/api/get-list' })
+      .then((result) => {
+        console.log('result:', result);
+      })
+      .catch((err) => {
+        console.log('err:', err);
+      });
   };
 
   return (
@@ -58,8 +77,11 @@ const Index = () => {
       <Button className={styles.button} onClick={handleRedux}>
         更新redux数据
       </Button>
-      <Button type="primary" className={styles.button}>
-        NutUI React Button
+      <Button type="primary" className={styles.button} onClick={getAjaxData}>
+        NutUI React Button,request
+      </Button>
+      <Button type="primary" className={styles.button} onClick={getAjaxData2}>
+        NutUI React Button,createRequest
       </Button>
     </View>
   );

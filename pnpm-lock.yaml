@@ -8,6 +8,9 @@ dependencies:
   '@babel/runtime':
     specifier: ^7.24.0
     version: 7.24.0
+  '@liangskyli/taro-request':
+    specifier: 0.1.0
+    version: 0.1.0(@tarojs/taro@3.6.23)
   '@nutui/nutui-react-taro':
     specifier: ^2.3.12
     version: 2.3.12(@types/react@18.2.64)(react-dom@18.2.0)(react@18.2.0)(rollup@4.12.1)
@@ -2350,6 +2353,23 @@ packages:
       - supports-color
       - utf-8-validate
     dev: true
+
+  /@liangskyli/request@0.1.0:
+    resolution: {integrity: sha512-Z4My5Ad3vUsdT4pwFOjiNsrePFut1wYU1MoEM7Nl+VQMgzMmO6Xw3FXNVMe/AU2KPh56THt98ynGDAy8aUkrEw==}
+    engines: {node: '>=16.8.0'}
+    dependencies:
+      deepmerge: 4.3.1
+    dev: false
+
+  /@liangskyli/taro-request@0.1.0(@tarojs/taro@3.6.23):
+    resolution: {integrity: sha512-CPQpzHRq/LPG8wYi2bSbp3ghppZbEA+WuqZdLqzIglcfJPVYgpHbG341KIUP70MMG1EhMTqlfZYBG66pYtelIA==}
+    engines: {node: '>=16.8.0'}
+    peerDependencies:
+      '@tarojs/taro': ^3.0.0
+    dependencies:
+      '@liangskyli/request': 0.1.0
+      '@tarojs/taro': 3.6.23(@tarojs/helper@3.6.23)(@tarojs/runtime@3.6.23)(@types/react@18.2.64)(postcss@8.4.35)
+    dev: false
 
   /@liangskyli/utils@4.0.0(prettier@3.2.5):
     resolution: {integrity: sha512-IyYcGcBRR2gP3gaTkiSVtNQt0tyZu2w2c8MjconLis4pEkvGry7DrxDrSkvgW67soH0PpbrUAO+u1l3fOsAU3A==}
@@ -6869,6 +6889,11 @@ packages:
     resolution: {integrity: sha512-95k0GDqvBjZavkuvzx/YqVLv/6YYa17fz6ILMSf7neqQITCPbnfEnQvEgMPNjH4kgobe7+WIL0yJEHku+H3qtQ==}
     engines: {node: '>=0.10.0'}
     dev: true
+
+  /deepmerge@4.3.1:
+    resolution: {integrity: sha512-3sUqbMEc77XqpdNO7FRyRog+eW3ph+GYCbj+rK+uYyRMuwsVy0rMiVtPn+QJlKFvWP/1PYpapqYn0Me2knFn+A==}
+    engines: {node: '>=0.10.0'}
+    dev: false
 
   /default-gateway@6.0.3:
     resolution: {integrity: sha512-fwSOJsbbNzZ/CUFpqFBqYfYNLj1NbMPm8MMCIzHjC83iSJRBEGmDUxU+WP661BaBQImeC2yHwXtz+P/O9o+XEg==}

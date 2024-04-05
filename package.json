@@ -56,6 +56,7 @@
   "license": "MIT",
   "dependencies": {
     "@babel/runtime": "^7.24.0",
+    "@liangskyli/taro-request": "0.1.0",
     "@nutui/nutui-react-taro": "^2.3.12",
     "@reduxjs/toolkit": "^2.2.1",
     "@taro-hooks/plugin-react": "^2.0.10",
