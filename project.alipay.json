@@ -1,0 +1,21 @@
+{
+  "appid": "touristappid",
+  "miniprogramRoot": "dist/",
+  "compileType": "mini",
+  "format": 2,
+  "developOptions": {
+    "minify": false,
+    "skipTranspile": false,
+    "parallel": true,
+    "hotReload": false
+  },
+  "compileOptions": {
+    "transpile": {
+      "script": {
+        "ignore": [
+          "node_modules/**"
+        ]
+      }
+    }
+  }
+}

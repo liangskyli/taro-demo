@@ -31,7 +31,8 @@ const Index = () => {
     dispatch(setEnvEnum('-1'));
   };
   const getAjaxData = async () => {
-    await request({ url: 'http://localhost:9001/api/get-list' })
+    // 支付宝不能用localhost，改用127.0.0.1
+    await request({ url: 'http://127.0.0.1:9001/api/get-list' })
       .then((result) => {
         console.log('result:', result);
       })
@@ -40,7 +41,7 @@ const Index = () => {
       });
   };
   const getAjaxData2 = async () => {
-    await createRequest({ url: 'http://localhost:9001/api/get-list' })
+    await createRequest({ url: 'http://127.0.0.1:9001/api/get-list' })
       .then((result) => {
         console.log('result:', result);
       })

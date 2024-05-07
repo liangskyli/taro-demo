@@ -23,6 +23,30 @@ const request = taroRequest<HttpJson>({
       console.log('handleError', err);
     },
   },
+  // 支付宝小程序接口请求码配置
+  taroSerializedErrorMiddlewareConfig: {
+    responseCodeKey: [
+      'retCode',
+      'code',
+      'status',
+      'statusCode',
+      // 支付宝
+      'error',
+    ],
+    responseMessageKey: [
+      'retMsg',
+      'message',
+      'statusText',
+      'errMsg',
+      // 支付宝
+      'errorMessage',
+    ],
+    messageMap: {
+      // 支付宝
+      ['Error: Request failed with status 0']: '网络错误，请检查网络配置',
+      ['超时']: '网络超时，请稍后再试',
+    },
+  },
 });
 export { createRequest };
 export default request;
