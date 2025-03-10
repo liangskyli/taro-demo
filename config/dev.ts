@@ -1,15 +1,18 @@
-import { defineConfig } from '@tarojs/cli';
+import type { UserConfigExport } from '@tarojs/cli';
 import path from 'path';
 
-module.exports = defineConfig({
+export default {
   env: {
     NODE_ENV: '"development"',
   },
-  defineConstants: {},
   plugins: [path.resolve(__dirname, './mock-server.ts')],
+  logger: {
+    quiet: false,
+    stats: true,
+  },
   mini: {
     // @ts-ignore
     hot: true,
   },
   h5: {},
-});
+} satisfies UserConfigExport<'webpack5'>;

@@ -1,10 +1,9 @@
-import { defineConfig } from '@tarojs/cli';
+import type { UserConfigExport } from '@tarojs/cli';
 
-module.exports = defineConfig({
+export default {
   env: {
     NODE_ENV: '"production"',
   },
-  defineConstants: {},
   mini: {},
   h5: {
     /**
@@ -34,4 +33,4 @@ module.exports = defineConfig({
     //     }))
     // }
   },
-});
+} satisfies UserConfigExport<'webpack5'>;

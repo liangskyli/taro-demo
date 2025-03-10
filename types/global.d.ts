@@ -1,4 +1,6 @@
 /// <reference types="@tarojs/taro" />
+/// <reference types="@taro-hooks/plugin-react" />
+import '@taro-hooks/plugin-react';
 
 declare module '*.png';
 declare module '*.gif';
@@ -13,6 +15,15 @@ declare module '*.styl';
 
 declare namespace NodeJS {
   interface ProcessEnv {
-    TARO_ENV: 'weapp' | 'swan' | 'alipay' | 'h5' | 'rn' | 'tt' | 'quickapp' | 'qq' | 'jd';
+    TARO_ENV:
+      | 'weapp'
+      | 'swan'
+      | 'alipay'
+      | 'h5'
+      | 'rn'
+      | 'tt'
+      | 'quickapp'
+      | 'qq'
+      | 'jd';
   }
 }

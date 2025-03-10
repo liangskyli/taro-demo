@@ -16,6 +16,7 @@
     "baseUrl": ".",
     "rootDir": ".",
     "jsx": "react-jsx",
+
     "allowJs": true,
     "resolveJsonModule": true,
     "esModuleInterop": true,
