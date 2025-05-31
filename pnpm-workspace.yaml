@@ -1,2 +1,4 @@
 ignoredBuiltDependencies:
+  - core-js-pure
+  - esbuild
   - taro-hooks
