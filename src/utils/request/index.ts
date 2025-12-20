@@ -1,4 +1,3 @@
-import type { SerializedError } from '@liangskyli/taro-request';
 import { taroCreateRequest, taroRequest } from '@liangskyli/taro-request';
 import Taro from '@tarojs/taro';
 
@@ -8,14 +7,16 @@ export type HttpJson<T = any> = {
   data: T;
 };
 
-const createRequest = taroCreateRequest<Taro.request.Option, HttpJson>({});
-const request = taroRequest<HttpJson>({
+const createRequest = taroCreateRequest<
+  (config: Taro.request.Option) => Promise<HttpJson>
+>({});
+const request = taroRequest<HttpJson, 'retCode', 'retMsg', 'data', string>({
   loadingMiddlewareConfig: {
     showLoading: () => Taro.showLoading({ title: '加载中...', mask: true }),
     hideLoading: () => Taro.hideLoading(),
   },
   ShowErrorMiddlewareConfig: {
-    showError: (err: SerializedError<'retCode', 'retMsg'>) => {
+    showError: (err) => {
       console.log('showError:', err);
       Taro.showToast({ title: err.retMsg, icon: 'none' });
     },

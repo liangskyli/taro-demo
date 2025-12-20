@@ -5,7 +5,7 @@ export default defineConfig({
   test: {
     include: ['./__test__/**/*.test.{ts,tsx,js}'],
     environment: 'jsdom',
-    setupFiles: ['./vitest.setup.ts'],
+    setupFiles: ['./vitest.setup.mts'],
     css: true,
     alias: {
       '@': path.join(__dirname, './src'),

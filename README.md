@@ -2,7 +2,7 @@
 
 基于 Taro 的 小程序 脚手架(react版)
 
-> Taro-cli version: Taro v4.1.1
+> Taro-cli version: Taro v4.1.9
 
 ## 主要功能
 
@@ -106,13 +106,13 @@ pnpm i
 
 ## 已配置的依赖
 
-| 名称                      | 库名称                                                                                     | 用途                                                                                   |
-|-------------------------|-----------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
-| Taro                    | [@tarojs/taro](https://taro-docs.jd.com/docs/)                                          | 基础库                                                                                  |
-| taro-hooks              | [taro-hooks](https://next-taro-hooks.pages.dev/site/)                                   | 一款对标 Taro API 开发的 Hooks Library. 覆盖几乎所有 Taro API 以及方法. 并且结合 ahooks 扩展了多端共用的 hooks 库. |
-| @reduxjs/toolkit        | [@reduxjs/toolkit](https://redux-toolkit.js.org/)                                       | 基于 redux 的数据流方案                                                                      |
-| @nutui/nutui-react-taro | [@nutui/nutui-react-taro](https://nutui.jd.com/taro/react/2x/#/zh-CN/guide/intro-react) | 基于 Taro，使用 React 技术栈开发小程序应用                                                          |
-
+| 名称                       | 库名称                                                                                               | 用途                                                                                   |
+|--------------------------|---------------------------------------------------------------------------------------------------|--------------------------------------------------------------------------------------|
+| Taro                     | [@tarojs/taro](https://taro-docs.jd.com/docs/)                                                    | 基础库                                                                                  |
+| taro-hooks               | [taro-hooks](https://next-taro-hooks.pages.dev/site/)                                             | 一款对标 Taro API 开发的 Hooks Library. 覆盖几乎所有 Taro API 以及方法. 并且结合 ahooks 扩展了多端共用的 hooks 库. |
+| @reduxjs/toolkit         | [@reduxjs/toolkit](https://redux-toolkit.js.org/)                                                 | 基于 redux 的数据流方案                                                                      |
+| @nutui/nutui-react-taro  | [@nutui/nutui-react-taro](https://nutui.jd.com/taro/react/2x/#/zh-CN/guide/intro-react)           | 基于 Taro，使用 React 技术栈开发小程序应用                                                          |
+| @liangskyli/taro-request | [@liangskyli/taro-request](https://github.com/liangskyli/request/tree/main/packages/taro-request) | 基于 Taro 的小程序请求库                                                                      |
 
 ## 开发环境的依赖
 
@@ -123,4 +123,4 @@ pnpm i
 | stylelint        | [stylelint](https://stylelint.io/)                                 | 规范检查           |
 | Prettier         | [prettier](https://prettier.io/docs/en/index.html)                 | 代码格式化          |
 | commitlint       | [commitlint](https://github.com/conventional-changelog/commitlint) | Git commit 规范化 |
-| @liangskyli/mock | [@liangskyli/mock](https://github.com/liangskyli/mock)             | http mock服务    |
+| @liangskyli/mock | [@liangskyli/mock](https://github.com/liangskyli/mock/tree/v6.0.0) | http mock服务    |
