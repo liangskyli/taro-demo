@@ -39,12 +39,12 @@ pnpm build:weapp
 ```
     ├── .husky                          // 提交钩子配置
     ├── __tests__                       // 单元测试
-    ├── dist/                           // 微信小程序编译结果目录
     ├── config/                         // Taro 配置目录
     │   ├── dev.ts                      // 开发时配置
     │   ├── index.ts                    // 默认配置
     │   ├── mock-server.ts              // mock服务，端口配置
     │   └── prod.ts                     // 打包时配置
+    ├── dist/                           // 微信小程序编译结果目录
     ├── mock/                           // mock目录
     ├── src/                            // 源码目录
     │   ├── assets/                     // 资源文件
@@ -59,12 +59,13 @@ pnpm build:weapp
     │   │       └── index.module.less   // 页面样式
     │   ├── services/                   // 全局模块请求
     │   ├── store/                      // redux 存储
-    │   ├── style/                      // 全局样式通用函数功能集合
+    │   ├── styles/                     // 全局样式通用函数功能集合
     │   ├── subpackages/                // 分包页面文件目录  
     │   │   ├── package1/               // 分包1
     │   │   │   ├── components/         // 分包公共组件   
     │   │   │   └── pages/              // 分包页面文件目录  
     │   ├── utils/                      // 常用工具类
+    │   ├── app.config.ts               // 全局配置
     │   ├── app.less                    // 全局样式
     │   ├── app.tsx                     // 入口文件
     │   └── index.html    
@@ -79,16 +80,18 @@ pnpm build:weapp
     ├── .prettierignore                 // 代码风格配置忽略文件
     ├── .prettierrc.js                  // 代码风格配置文件
     ├── .stylelintignore                // 样式风格配置忽略文件
-    ├── .stylelintrc.js                 // 样式风格配置文件
     ├── babel.config.js                 // babel配置文件
     ├── package.json                    // 项目依赖
     ├── pnpm-lock.yaml                  // pnpm-lock.yaml 锁定文件 
+    ├── pnpm-workspace.yaml             // 工作空间文件
+    ├── project.alipay.json             // 支付宝小程序项目配置
     ├── project.config.json             // 微信小程序项目配置
     ├── project.tt.json                 // 头条小程序项目配置
     ├── README.md
+    ├── stylelint.config.mjs            // 样式风格配置文件
     ├── tsconfig.json                   // typescript配置文件
-    ├── vitest.config.ts                // 单元测试配置文件
-    └── vitest.setup.ts                 // 单元测试启动setup配置文件
+    ├── vitest.config.mts               // 单元测试配置文件
+    └── vitest.setup.mts                // 单元测试启动setup配置文件
 ```
 
 ## 项目版本升级
