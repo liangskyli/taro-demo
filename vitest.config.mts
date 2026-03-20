@@ -11,7 +11,7 @@ export default defineConfig({
       '@': path.join(__dirname, './src'),
       '@tarojs/components': '@tarojs/components/lib/react/component-lib',
     },
-    globals: true,
+    globals: false,
     testTimeout: 1000 * 60,
     coverage: {
       provider: 'v8',

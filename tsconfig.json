@@ -32,8 +32,7 @@
     "mock/**/*",
     "__test__",
     "./vitest.setup.mts",
-    "./vitest.config.mts",
-    "node_modules/vitest/globals.d.ts"
+    "./vitest.config.mts"
   ],
   "compileOnSave": false
 }

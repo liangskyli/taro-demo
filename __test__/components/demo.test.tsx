@@ -1,5 +1,6 @@
 import Demo from '@/components/demo';
 import { render } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
 
 // mock方法来模拟@tarojs/taro的 api
 vi.mock('@tarojs/taro', () => {
